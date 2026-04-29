@@ -1,0 +1,40 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# KiCad
+*-backups/
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_prl
+fp-info-cache
+_autosave-*
+
+# KiCad fab outputs (regenerated; gerbers/ checked in only on tagged releases)
+hardware/kicad/**/gerbers/
+hardware/kicad/**/*.zip
+
+# FreeCAD
+*.FCStd1
+*.FCBak
+
+# ESP-IDF / PlatformIO
+firmware/build/
+firmware/.pio/
+firmware/sdkconfig.old
+firmware/dependencies.lock
+firmware/managed_components/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (for any docs tooling)
+node_modules/

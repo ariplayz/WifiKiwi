@@ -1,0 +1,52 @@
+name: hardware
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'hardware/**'
+      - '.github/workflows/hardware.yml'
+  pull_request:
+    paths:
+      - 'hardware/**'
+      - '.github/workflows/hardware.yml'
+
+jobs:
+  kicad-checks:
+    name: KiCad ERC + DRC
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run ERC on schematic
+        working-directory: hardware/kicad
+        run: |
+          if ls *.kicad_sch >/dev/null 2>&1; then
+            for sch in *.kicad_sch; do
+              kicad-cli sch erc --severity-error "$sch" -o "${sch%.kicad_sch}-erc.rpt"
+            done
+          else
+            echo "No schematic yet — skipping ERC."
+          fi
+
+      - name: Run DRC on PCB
+        working-directory: hardware/kicad
+        run: |
+          if ls *.kicad_pcb >/dev/null 2>&1; then
+            for pcb in *.kicad_pcb; do
+              kicad-cli pcb drc --severity-error "$pcb" -o "${pcb%.kicad_pcb}-drc.rpt"
+            done
+          else
+            echo "No PCB yet — skipping DRC."
+          fi
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kicad-reports
+          path: |
+            hardware/kicad/*.rpt
+          if-no-files-found: ignore

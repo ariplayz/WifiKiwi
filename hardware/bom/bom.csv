@@ -1,0 +1,34 @@
+Designator,Quantity,Value / Part,Manufacturer,MPN,LCSC #,Package,Notes
+U1,1,ESP32-C5-WROOM-1U-N8R8,Espressif,ESP32-C5-WROOM-1U-N8R8,TBD,Module 18x21.2x3.3 mm,Dual-band Wi-Fi 6 + BLE 5.3; u.FL antenna pad
+U2,1,CC1101 module,TI,CC1101 (E07-M1101D),TBD,Through-hole module,Sub-GHz 300-928 MHz transceiver
+U3,1,ADF4351 module,Analog Devices,ADF4351,TBD,Through-hole module,35 MHz - 4.4 GHz CW signal generator
+U4,1,RTL-SDR v4 dongle,RTLSDRBlog,RTL-SDR v4,n/a,USB,Internal USB-A receptacle; user-installed
+U5,1,CH334F (USB hub),WCH,CH334F,C5346767,SOP-16,USB hub for ESP32-C5 + RTL-SDR
+U6,1,FT6336U touch controller,FocalTech,FT6336U,TBD,FPC,Capacitive touch on ILI9488 panel
+U7,1,ILI9488 LCD module,Sitronix,ILI9488 3.5",TBD,FPC,480x320 IPS w/ FT6336U touch
+U10,1,TP4056,NanJing,TP4056,C16581,SOP-8,USB-C Li-ion charger
+U11,1,MT3608,XLSemi,MT3608,C47773,SOT-23-6,Boost 3.7V -> 5V
+U12,1,AMS1117-3.3,Advanced Monolithic,AMS1117-3.3,C6186,SOT-223,LDO 3.3V
+U20-U22,3,PE4259,pSemi,PE4259,C84477,SC-70-6,SPDT RF switch DC-3 GHz (2.4G & 5G antenna routing)
+U23-U24,2,PE43711,pSemi,PE43711,TBD,QFN-20,7-bit 0-31.75 dB step attenuator on TX paths
+U25-U26,2,SPF5189Z,Qorvo,SPF5189Z,C459857,SOT-89,LNA 50 MHz - 4 GHz on RX paths (with bypass)
+DPX1,1,Diplexer LP<1G / HP>2G,Anaren,BD0810N50100AHF,TBD,LTCC,Antenna A diplexer (sub-GHz / 2.4G split)
+J1,1,SMA-A connector,Multiple,SMA-J-PCB,C40104,Edge mount,Low-band antenna (sub-GHz + 2.4 GHz)
+J2,1,SMA-B connector,Multiple,SMA-J-PCB,C40104,Edge mount,High-band antenna (5 GHz)
+J3,1,USB-C 16-pin,Multiple,TYPE-C-31-M-12,C165948,SMD,Power + serial console
+J4,1,microSD socket,Multiple,Micro SD push-push,C91145,SMD,Logging + saved captures
+J5,1,Internal USB-A receptacle,Multiple,USB-A-90,TBD,Through-hole,For RTL-SDR dongle
+J6,1,2x18 0.1" header,Multiple,FH 2x18 2.54 mm,TBD,Through-hole,LCD interface
+J7,1,JST-PH 2-pin,JST,B2B-PH-K-S,C131350,Through-hole,18650 holder leads
+SW1,1,5-way navigation switch,Alps,SKQUCAA010,TBD,Through-hole,Joystick + select
+SW2-SW4,3,6x6 mm tact switch,Multiple,TS-1187A,C220478,Through-hole,OK / BACK / MODE
+SW5,1,SS12D00 slide switch,Multiple,SS12D00,C319121,Through-hole,Hard power switch
+LED1,1,Green 0805,Multiple,LED-0805-G,C2296,0805,Power
+LED2,1,Yellow 0805,Multiple,LED-0805-Y,TBD,0805,Charging
+LED3,1,Red 0805,Multiple,LED-0805-R,C2295,0805,RF ACTIVE - mandatory visual
+B1,1,18650 holder,Multiple,Keystone 1042,TBD,Through-hole,Single 18650 cell
+BAT1,1,18650 cell 3000 mAh,Samsung,INR18650-30Q,n/a,18650,User supplied
+ANT1,1,Wideband antenna 400 MHz - 2.7 GHz,Multiple,LP-2700,n/a,SMA male,Low-band swappable - or use 915 MHz whip + 2.4 GHz dipole pair
+ANT2,1,Dual-band 2.4/5 GHz dipole 5 dBi,Multiple,DBA-58,n/a,SMA male,High-band antenna
+,,,,,,,
+,,,,,,,Passives (R/C/L) tallied separately - see passives.csv

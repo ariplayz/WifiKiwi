@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a defect in firmware, hardware, or documentation
+labels: [bug]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - firmware
+        - hardware
+        - docs
+        - build / CI
+    validations:
+      required: true
+  - type: input
+    id: hw-rev
+    attributes:
+      label: Hardware revision (if applicable)
+      placeholder: "e.g. rev A"
+  - type: input
+    id: fw-version
+    attributes:
+      label: Firmware version / commit (if applicable)
+      placeholder: "e.g. 0.1.0 or git sha"
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and the steps to reproduce it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs / serial output / photos
+      render: shell

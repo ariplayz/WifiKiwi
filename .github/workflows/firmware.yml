@@ -1,0 +1,37 @@
+name: firmware
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware.yml'
+  pull_request:
+    paths:
+      - 'firmware/**'
+      - '.github/workflows/firmware.yml'
+
+jobs:
+  build:
+    name: Build firmware (ESP-IDF / ESP32-C5)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Set up ESP-IDF
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.4
+          target: esp32c5
+          path: firmware
+
+      # NOTE: this step will fail until firmware/CMakeLists.txt exists.
+      # The workflow is in place so that as soon as the first source lands
+      # on a feature branch CI runs against it. Remove the `continue-on-error`
+      # once the firmware actually builds.
+      - name: Show artifacts
+        if: always()
+        run: |
+          ls -la firmware/build || echo "no build output yet"
