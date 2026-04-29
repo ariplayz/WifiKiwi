@@ -1,0 +1,429 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "768de0d8-f447-4b28-91fc-ae57d6b4c6b8")
+	(paper "A3")
+	(title_block
+		(title "MCU - ESP32-C5-WROOM-1U + USB/JTAG + boot logic")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "bda3a724-1b8c-40a8-a21c-2c065fe90932")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "aca6da4d-edf1-4f6f-b4b3-5cece526c9ba")
+)
+(hierarchical_label "USB_DP"
+	(shape bidirectional)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "7adc31b8-ff3c-47d2-8a80-977dd7bfd8e7")
+)
+(hierarchical_label "USB_DM"
+	(shape bidirectional)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "79e5bd5a-3934-4112-83a5-714829e04f11")
+)
+(hierarchical_label "UART_TX"
+	(shape output)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "75736601-c8ec-4901-91ac-404a197f6c87")
+)
+(hierarchical_label "UART_RX"
+	(shape input)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a36b3556-fdcf-46fd-b369-ec7c1acf4162")
+)
+(hierarchical_label "SPI_LCD_SCK"
+	(shape output)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "8b85e263-0537-4a9c-96e6-cf07e9f70269")
+)
+(hierarchical_label "SPI_LCD_MOSI"
+	(shape output)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "099ae0b8-a69d-4f25-a153-b04be2cad5dd")
+)
+(hierarchical_label "SPI_LCD_MISO"
+	(shape input)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "ff34847e-cc99-4d8c-8be3-158a99ce0590")
+)
+(hierarchical_label "SPI_LCD_CS"
+	(shape output)
+	(at 30 75 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4b56ed14-4c09-4b55-a63b-497a33e72020")
+)
+(hierarchical_label "SPI_LCD_DC"
+	(shape output)
+	(at 30 80 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5ded5498-5f4e-435d-94ab-837b3a44b50e")
+)
+(hierarchical_label "SPI_LCD_RST"
+	(shape output)
+	(at 30 85 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "c3c8cf58-088d-48f4-9a71-77a3ecb14cc6")
+)
+(hierarchical_label "SPI_LCD_BL"
+	(shape output)
+	(at 30 90 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "cfab5166-85e2-483a-80d9-7041ef070805")
+)
+(hierarchical_label "I2C_SDA"
+	(shape bidirectional)
+	(at 30 95 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "bd3d6375-732b-45e7-984d-b314b666c0be")
+)
+(hierarchical_label "I2C_SCL"
+	(shape output)
+	(at 30 100 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "412f5d6e-ec0b-4ccb-80b1-64944eaa96c6")
+)
+(hierarchical_label "TOUCH_INT"
+	(shape input)
+	(at 30 105 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "582395b0-51cb-431e-85af-0ee56597b61c")
+)
+(hierarchical_label "TOUCH_RST"
+	(shape output)
+	(at 30 110 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f1f3898d-20c4-4396-a7e7-71730ff79945")
+)
+(hierarchical_label "SPI_RF_SCK"
+	(shape output)
+	(at 30 115 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f2ef015c-286a-4f25-a3aa-a3ea1f78db27")
+)
+(hierarchical_label "SPI_RF_MOSI"
+	(shape output)
+	(at 30 120 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4388b344-72c0-453f-b0f0-3f20df1e2ee6")
+)
+(hierarchical_label "SPI_RF_MISO"
+	(shape input)
+	(at 30 125 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "fde3660e-bd88-417e-9071-812ad4727e66")
+)
+(hierarchical_label "CC1101_CS"
+	(shape output)
+	(at 30 130 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a7715c94-5da4-443f-9477-a815df1ee28b")
+)
+(hierarchical_label "CC1101_GDO0"
+	(shape input)
+	(at 30 135 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "45fc12da-6dc8-4039-84cc-f1719fca12a8")
+)
+(hierarchical_label "CC1101_GDO2"
+	(shape input)
+	(at 30 140 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "13f6a04d-cb59-46c7-896e-faec89a2b613")
+)
+(hierarchical_label "ADF_LE"
+	(shape output)
+	(at 30 145 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a94d9480-6ddc-4404-bdb6-f2f6ada20b53")
+)
+(hierarchical_label "ADF_CE"
+	(shape output)
+	(at 30 150 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f8384fc5-cb8c-4bf8-b670-e5a5013d952a")
+)
+(hierarchical_label "ADF_LD"
+	(shape input)
+	(at 30 155 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "7b18c26f-13f2-4696-a672-130a4e8c5bfa")
+)
+(hierarchical_label "SD_CS"
+	(shape output)
+	(at 30 160 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "794080d1-bcdc-40ea-90cf-8c17d12b6584")
+)
+(hierarchical_label "SW_BAND_CTL"
+	(shape output)
+	(at 30 165 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "b7576a5c-8df9-4ba5-8277-eeebe3718a08")
+)
+(hierarchical_label "SW_SMA_A_CTL"
+	(shape output)
+	(at 30 170 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a158d823-779b-4785-ac3e-bcf420cbc810")
+)
+(hierarchical_label "SW_SMA_B_CTL"
+	(shape output)
+	(at 30 175 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "77b932bc-e41b-401c-b9f0-bb8984cc482f")
+)
+(hierarchical_label "ATTEN_LO_LE"
+	(shape output)
+	(at 30 180 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "d57d78c4-1618-472a-a49a-de736110953d")
+)
+(hierarchical_label "ATTEN_HI_LE"
+	(shape output)
+	(at 30 185 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "bf91d436-6401-477e-bcf0-7009facee723")
+)
+(hierarchical_label "ATTEN_CLK"
+	(shape output)
+	(at 30 190 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "1e7735fe-8c02-424e-bf7a-05d9a95f7312")
+)
+(hierarchical_label "ATTEN_DATA"
+	(shape output)
+	(at 30 195 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "bc4288a5-ef6e-4a4c-b6c0-25e501dbd353")
+)
+(hierarchical_label "LNA_LO_EN"
+	(shape output)
+	(at 30 200 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "8a351333-9d80-44df-9a93-186e204576ad")
+)
+(hierarchical_label "LNA_HI_EN"
+	(shape output)
+	(at 30 205 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "8b3ecf3f-8aa9-407a-a5e3-ccf37126bbdd")
+)
+(hierarchical_label "LNA_LO_BYP"
+	(shape output)
+	(at 30 210 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "92fde981-8128-4acb-a1f5-305a0c0a3069")
+)
+(hierarchical_label "LNA_HI_BYP"
+	(shape output)
+	(at 30 215 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "087a2049-7308-4b7c-9ae3-cc93b90977fa")
+)
+(hierarchical_label "RF_ACTIVE"
+	(shape output)
+	(at 30 220 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4fc65e50-0c67-45f2-a37f-c63f57155f27")
+)
+(hierarchical_label "BTN_OK"
+	(shape input)
+	(at 30 225 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5d67fcfb-a2b3-4aeb-88b2-f2f5d8886557")
+)
+(hierarchical_label "BTN_BACK"
+	(shape input)
+	(at 30 230 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f8512a78-9d6e-4a2d-b643-be4aeb2aecbc")
+)
+(hierarchical_label "BTN_UP"
+	(shape input)
+	(at 30 235 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a5e55e59-7d06-4f3e-b243-ae4252e9c96d")
+)
+(hierarchical_label "BTN_DOWN"
+	(shape input)
+	(at 30 240 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "1757761e-7bfa-45ff-a680-207607602609")
+)
+(hierarchical_label "BAT_LVL"
+	(shape input)
+	(at 30 245 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "d0f786af-36fa-457b-a1b0-9afa9f141309")
+)
+(hierarchical_label "CHG_STAT"
+	(shape input)
+	(at 30 250 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "ff8b58f2-17e2-4659-8f84-9087b8311e36")
+)
+(text "ESP32-C5-WROOM-1U-N8R8 (LCSC C-TBD) - dual-band Wi-Fi 6 + BLE 5.3, 8MB flash, 8MB PSRAM, u.FL antenna pigtail.\nDECOUPLING\n----------\nVDD pin: 10uF + 100nF + 10nF + 1nF in parallel right at the module pad.\nEN pin: 10k pullup to V3P3, 1uF to GND, RC delay >= 50ms after VDD stable.\nBOOT/STRAP\n----------\nGPIO0: 10k pullup; pushbutton to GND (BOOT button).\nEN  : 10k pullup; pushbutton to GND (RST button); 100nF to GND.\nGPIO45/46/8 strapping: leave at default (boot-from-flash).\nUSB\n---\nUSB_DP / USB_DM go to USB-C (with 22 ohm series + ESD diodes). Use native USB-Serial-JTAG.\nUART0 also broken out to a 4-pin header (RX/TX/RTS/DTR auto-reset for esptool).\nPIN ASSIGNMENT (CANDIDATE - HUMAN MUST VERIFY AGAINST C5 STRAPS)\n---------------------------------------------------------------\nGPIO 4..7   : SPI for LCD (SCK/MOSI/MISO/CS)\nGPIO 8      : LCD DC\nGPIO 9      : LCD RST\nGPIO 10     : LCD BL (LEDC PWM channel 0)\nGPIO 11/12  : I2C (SCL/SDA) for FT6336U @ 400 kHz\nGPIO 13     : TOUCH_INT\nGPIO 14     : TOUCH_RST\nGPIO 15..18 : SPI for RF (SCK/MOSI/MISO/CC1101_CS)\nGPIO 19/20  : CC1101 GDO0/GDO2\nGPIO 21..23 : ADF4351 LE/CE/LD\nGPIO 24     : SD_CS\nGPIO 25..27 : PE4259 SW_BAND/SMA_A/SMA_B control\nGPIO 28..31 : PE43711 LE_LO/LE_HI/CLK/DATA\nGPIO 32..35 : LNA_LO_EN/HI_EN/LO_BYP/HI_BYP\nGPIO 36     : RF_ACTIVE LED (red, 1k series)\nGPIO 37..40 : 4 user buttons (OK/BACK/UP/DOWN, internal pullups)\nADC1_CH0    : BAT_LVL\nGPIO ANY    : CHG_STAT (input, pullup)"
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "b60f3688-ba53-4d75-aa6f-e1f7c4e1c6f8")
+)
+	(embedded_fonts no)
+)

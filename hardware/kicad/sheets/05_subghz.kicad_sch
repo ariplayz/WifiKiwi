@@ -1,0 +1,105 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "a4ceb69d-8d67-4d36-a4dd-9076ad6b0c49")
+	(paper "A3")
+	(title_block
+		(title "Sub-GHz - CC1101 transceiver")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3_RF"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "74502f29-c863-401d-b0e4-56389125b559")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f0c2432e-fb87-4f2c-beb5-1403793544bb")
+)
+(hierarchical_label "SPI_RF_SCK"
+	(shape input)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "ab6a5f4b-400d-4c2b-942a-34e7ee409e31")
+)
+(hierarchical_label "SPI_RF_MOSI"
+	(shape input)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4520bc44-3da3-4ece-80bc-231f13a764fc")
+)
+(hierarchical_label "SPI_RF_MISO"
+	(shape output)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5b5cc900-5277-4f22-a40d-5fcb10750ff9")
+)
+(hierarchical_label "CC1101_CS"
+	(shape input)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "184ed7af-107c-4b8f-9e08-1a2f1f8e40d4")
+)
+(hierarchical_label "CC1101_GDO0"
+	(shape output)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a1314fb3-02ac-4384-b694-224f2dcfdbc9")
+)
+(hierarchical_label "CC1101_GDO2"
+	(shape output)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "564df288-9c82-462b-bf29-849e6158133a")
+)
+(hierarchical_label "CC1101_RF"
+	(shape output)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "d3900a2c-829f-4cad-a1b0-af6c576dd427")
+)
+(text "CC1101 - TI sub-GHz transceiver. Use the bare IC (QFN-20) plus its reference balun + matching\nnetwork for 433/868/915 MHz. TI app-note DN017 recommends:\n  - 26 MHz crystal (CL = 10pF), 12pF/12pF load caps.\n  - Balun: Johanson 0433BM15A0001 or Murata LDB212G4520C-110 (band-dependent).\n  - Output DC block (10nF), then to PE43711 #1 in the RF front-end sheet (via CC1101_RF).\nDECOUPLING: 100nF + 10nF + 1nF on each VDD pin (4 places).\nGDO0/GDO2 GPIOs go straight to the ESP32 (used for FIFO IRQ and clock-out)."
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "c61846a4-2a97-4771-8ec9-abeb0ef36696")
+)
+	(embedded_fonts no)
+)

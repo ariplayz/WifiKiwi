@@ -1,0 +1,105 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "e635ecdb-22f3-4bf6-9893-b840771025a7")
+	(paper "A3")
+	(title_block
+		(title "Power - USB-C input, charger, regulators")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "VBUS_5V"
+	(shape output)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "2d90d57b-0da2-44fc-9477-15f0384185fa")
+)
+(hierarchical_label "VSYS"
+	(shape output)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "fe21f6e1-c374-426a-9917-2c5dee589e94")
+)
+(hierarchical_label "VBAT"
+	(shape bidirectional)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "bb60f568-5c7d-4873-b259-958ba5825966")
+)
+(hierarchical_label "V3P3"
+	(shape output)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "e45b067f-ebfb-49b1-afb8-0f858fe144bc")
+)
+(hierarchical_label "V3P3_RF"
+	(shape output)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "b82bb350-e2a7-44e0-b8c5-cb6404bf4bdb")
+)
+(hierarchical_label "V5P0_LCD"
+	(shape output)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4055f7f5-8b1c-4e5b-a4a6-23269fa14ce4")
+)
+(hierarchical_label "PWR_EN"
+	(shape input)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "6901560f-acf6-4346-bfdc-85ddcf6b9ce2")
+)
+(hierarchical_label "CHG_STAT"
+	(shape output)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "e3de1115-9e80-4e2d-ab22-3adb3f4d150e")
+)
+(hierarchical_label "BAT_LVL"
+	(shape output)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "2303130e-2a64-4237-a8a2-aa4de8587be9")
+)
+(text "POWER TREE\n==========\nUSB-C (CC1/CC2 5.1k pulldowns) -> ESD (SP3010) -> VBUS_5V\nVBUS_5V -> TP4056 (1A charge, NTC pin -> 10k thermistor) -> VBAT (1S Li-ion 2000-3000mAh, JST-PH 2.0)\nideal-diode OR (DMP2160 / FDN340P) between VBUS_5V and VBAT -> VSYS\nVSYS -> TPS61023 boost (5.0V @ 1A) -> V5P0_LCD (display backlight + 5V rail)\nVSYS -> AP2112K-3.3 LDO (600mA) -> V3P3 (digital, MCU, logic)\nV3P3 -> ferrite bead BLM18PG471 -> V3P3_RF (clean rail to CC1101, ADF4351, LNAs, switches)\nVBAT -> resistor divider (200k/100k) -> BAT_LVL (to ESP32 ADC, 0-2.2V range)\nTP4056 STAT pin -> CHG_STAT (open-drain, ESP32 GPIO with pullup)\nPWR_EN: latching pushbutton -> Pchan FET high-side switch on VSYS\nBULK CAPS\n----------\nVBUS: 10uF X5R 0805 + 100nF\nVBAT: 22uF X5R + 100nF\nV3P3: 10uF + 100nF + 100nF (one near each IC)\nV3P3_RF: 4.7uF + 100nF + 10nF (RF rail; place 10nF closest to each pin)\nV5P0_LCD: 22uF + 100nF"
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "9db189c4-f34e-4777-afd9-1238a5f341c5")
+)
+	(embedded_fonts no)
+)

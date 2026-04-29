@@ -1,0 +1,186 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "fa7993a5-17d8-4cef-a74b-cde5c2f4b2a1")
+	(paper "A3")
+	(title_block
+		(title "RF Front-End - SMA-A/B, diplexer, 3x PE4259, 2x PE43711, 2x SPF5189Z, U.FL test pads, bias-T")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3_RF"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "1235276c-69b4-4a76-a81d-30c3c42805ff")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "cd0b4515-8fcd-4996-aeed-67dea289e1fd")
+)
+(hierarchical_label "ESP_UFL_RF"
+	(shape input)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "197df794-48ae-450b-946a-14ac5fb1c1d0")
+)
+(hierarchical_label "CC1101_RF"
+	(shape input)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5f9c1d96-c804-46e0-85ea-2a7981a00ef4")
+)
+(hierarchical_label "RTLSDR_RF"
+	(shape output)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "9fba3daa-65fd-4968-ae97-6d8f399219e4")
+)
+(hierarchical_label "ADF_RF"
+	(shape input)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "281c37b5-a1f7-48fa-a84a-3017b89a59e4")
+)
+(hierarchical_label "SW_BAND_CTL"
+	(shape input)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4663d7eb-f6c9-4ed6-8813-99bd6a71cc1c")
+)
+(hierarchical_label "SW_SMA_A_CTL"
+	(shape input)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "25f53229-be52-4c2b-9925-0c458f511fb5")
+)
+(hierarchical_label "SW_SMA_B_CTL"
+	(shape input)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5a0dcc9c-f630-42c7-8a76-3a1df4cb42aa")
+)
+(hierarchical_label "ATTEN_LO_LE"
+	(shape input)
+	(at 30 75 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "07eaf795-c37b-4d42-8ce7-6686266d7756")
+)
+(hierarchical_label "ATTEN_HI_LE"
+	(shape input)
+	(at 30 80 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "28e1230c-3f97-4a04-9306-064dace24df3")
+)
+(hierarchical_label "ATTEN_CLK"
+	(shape input)
+	(at 30 85 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "b5fa9cb6-d022-4d2e-907d-0c2083fee403")
+)
+(hierarchical_label "ATTEN_DATA"
+	(shape input)
+	(at 30 90 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5422921d-9f64-4063-b4b5-8f0d7348e26f")
+)
+(hierarchical_label "LNA_LO_EN"
+	(shape input)
+	(at 30 95 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "9a3034be-98b2-4dc8-8f21-fe2390ffc468")
+)
+(hierarchical_label "LNA_HI_EN"
+	(shape input)
+	(at 30 100 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "cab68585-4e73-42bc-a783-f16b09e031ea")
+)
+(hierarchical_label "LNA_LO_BYP"
+	(shape input)
+	(at 30 105 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "460732aa-5ec2-4923-88dc-25185f52d425")
+)
+(hierarchical_label "LNA_HI_BYP"
+	(shape input)
+	(at 30 110 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "6a8dc841-99b6-4ae1-83f6-6ddfd2563319")
+)
+(hierarchical_label "BIAST_EN"
+	(shape input)
+	(at 30 115 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "6a34445a-6673-42d4-b6b7-ef058d7db99c")
+)
+(text "RF FRONT-END (50 ohm CONTROLLED IMPEDANCE)\n==========================================\nTwo antennas:\n  SMA-A: 300 MHz - 2.5 GHz   (low band)\n  SMA-B: 2.5 GHz - 5.8 GHz   (high band)\nTOPOLOGY:\n  ESP32-C5 u.FL --[PE4259 #1: SW_BAND]-- {2.4G route to SMA-A} | {5G route to SMA-B}\n  CC1101 RF -----[PE43711 #1 ATTEN_LO]----[diplexer LP <1G]------> SMA-A common pin\n                                                                  ^\n  ESP-2.4G <-[PE4259 #2: SW_SMA_A_HP]-> RTL-SDR <-[SPF5189 #1, bypass via PE4259]----+\n                                                                                     |\n                                                       diplexer HP >2G --------------+\n  ESP-5G   <-[PE4259 #3: SW_SMA_B  ]-> ADF4351 <-[PE43711 #2 ATTEN_HI]--> SMA-B common pin\n                                                                                     \nADAPTABILITY (RX side):\n  SPF5189Z LNAs sit ahead of each RX path (one for low band into RTL-SDR via diplexer HP,\n  one optional for high band). Each has a PE4259 SPDT around it for bypass when signals\n  are strong. Bias enable comes from LNA_LO_EN / LNA_HI_EN.\nBIAS-T on SMA-A:\n  Shunt 100uH choke from VBIAST_5V to centre conductor through 0 ohm 0402 (DNP by default).\n  Series 10nF DC block on the radio side. Footprint present, parts not stuffed by default.\n  BIAST_EN gates a P-channel FET that connects 5V to the choke -- never powered at boot.\nU.FL CONDUCTED-TEST PADS:\n  Place a u.FL connector tap (via a 33pF coupling cap to GND through a u.FL footprint\n  that defaults open) at: CC1101 TX out, ADF4351 RF out, ESP32 u.FL line, RTL-SDR in.\n  Allows lab measurement without radiating.\nPE4259 SUPPLY PINS:\n  Each PE4259 needs V3P3_RF on V+ pin (some variants), 100nF decoupling close.\n  Control line direct from ESP32 GPIO; no level shift needed.\nPE43711 SUPPLY:\n  V3P3_RF on VDD, 100nF decoupling. Serial 3-wire LE/CLK/DATA from ESP32, parallel-mode\n  P/S pin tied LOW for serial control.\nSPF5189Z BIAS:\n  Vd = 5V via 22nH bias choke + 100nF / 10nF on the supply side, output DC blocked with 10nF.\n  Enable via P-channel FET gated by LNA_*_EN.\nLAYOUT NOTES (FOR PCB SHEET):\n  - All RF traces 50 ohm coplanar waveguide on top layer, GND pour both sides + via fence\n    every lambda/20 at 5.8 GHz (~2.5 mm).\n  - Keep SMA-B path < 25 mm from connector to PE4259 #1.\n  - U.FL pigtail from ESP32-C5 module to PE4259 #1: < 50 mm, low-loss coax.\n  - Diplexer corner around 1.5 GHz, LC topology (e.g. Murata LFB182G45)."
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "67b06fca-6924-4f31-bf60-cbbdb678b583")
+)
+	(embedded_fonts no)
+)

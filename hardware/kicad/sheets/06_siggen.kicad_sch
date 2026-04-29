@@ -1,0 +1,105 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "a70ae98f-204d-4ccd-a34e-c37fb53ac600")
+	(paper "A3")
+	(title_block
+		(title "Signal generator - ADF4351 PLL/VCO")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3_RF"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "2971a175-69b7-4b5f-9895-179f81801807")
+)
+(hierarchical_label "V5P0_LCD"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "6657afd1-f3d3-4574-a225-7facf48f2574")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "8fcaa647-91a5-4103-83a5-ce32ebd1b070")
+)
+(hierarchical_label "ADF_LE"
+	(shape input)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "964b0b1f-d0d3-4ce7-9291-5df1e59e7bb9")
+)
+(hierarchical_label "ADF_CE"
+	(shape input)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "78faacb1-94e7-4e8c-bab8-b95c462ec128")
+)
+(hierarchical_label "ADF_LD"
+	(shape output)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "b4c18495-59e7-498e-995f-62d635fb2ca3")
+)
+(hierarchical_label "SPI_RF_SCK"
+	(shape input)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "70cfa967-0335-44ea-9ffe-7135cdfd7f8e")
+)
+(hierarchical_label "SPI_RF_MOSI"
+	(shape input)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "3cc320d4-07d8-40bb-a070-2b9a4b3e63e5")
+)
+(hierarchical_label "ADF_RF"
+	(shape output)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a09b5e13-1b1b-4c22-8947-ed192ecba50e")
+)
+(text "ADF4351 - 35 MHz to 4.4 GHz fractional-N PLL with integrated VCO.\nTwo supply rails per the datasheet:\n  - AVDD/DVDD = 3.3V (V3P3_RF)\n  - VVCO/VP   = 5.0V (V5P0_LCD branch through a clean LDO -- consider TPS7A4700 if\n                       phase-noise budget is tight; otherwise AP2112K-5.0 is OK).\nReference: 25 MHz TCXO (e.g. SiTime SiT5008) on REFin, AC-coupled with 100nF.\nLoop filter: 4.7 kohm + 4.7nF + 100pF (canonical 50 kHz LBW, see ADIsimPLL).\nMUXOUT routed to ADF_LD (digital lock detect to ESP32).\nOutput A (RF+): single-ended via 50 ohm pull-up + DC block (10nF) -> ADF_RF.\nOutput B   : terminated 50 ohm to GND.\nDecoupling: 100nF + 10nF on every supply pin."
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "45d06d0f-a69a-4996-84e1-1ba7a3de5540")
+)
+	(embedded_fonts no)
+)

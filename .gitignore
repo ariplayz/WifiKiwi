@@ -38,3 +38,11 @@ venv/
 
 # Node (for any docs tooling)
 node_modules/
+
+# KiCad runtime / editor cruft
+*.kicad_pro.lck
+~*.kicad_*.lck
+*.kicad_prl
+.history/
+*-backups/
+fp-info-cache

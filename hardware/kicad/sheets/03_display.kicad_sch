@@ -1,0 +1,150 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "0e3a89ae-bd10-49c0-96e5-f34cc9d783d9")
+	(paper "A3")
+	(title_block
+		(title "Display - ILI9488 3.5\" SPI LCD + FT6336U cap touch")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "47a15642-0639-4969-9f77-666422fb65db")
+)
+(hierarchical_label "V5P0_LCD"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5507c8d1-b4ba-4710-8deb-5608d179e72d")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "4224e999-09d1-4790-8292-b877c915146c")
+)
+(hierarchical_label "SPI_LCD_SCK"
+	(shape input)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "74fbfc2a-c448-4776-b5f2-3631827136dd")
+)
+(hierarchical_label "SPI_LCD_MOSI"
+	(shape input)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "e39e117b-b1a2-4a45-beca-bc826fecdeea")
+)
+(hierarchical_label "SPI_LCD_MISO"
+	(shape output)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "24e62569-d1e3-4476-b182-6b80d1f04bc3")
+)
+(hierarchical_label "SPI_LCD_CS"
+	(shape input)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "3b60ca7e-7c33-4713-b8b0-145365a35f2e")
+)
+(hierarchical_label "SPI_LCD_DC"
+	(shape input)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "c34440d3-9fd2-465f-a308-42e4bd8bc6a4")
+)
+(hierarchical_label "SPI_LCD_RST"
+	(shape input)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "c00a5229-41fe-4df2-9e44-5c597a582679")
+)
+(hierarchical_label "SPI_LCD_BL"
+	(shape input)
+	(at 30 75 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "0408ef34-1b79-4518-a765-074589e44859")
+)
+(hierarchical_label "I2C_SDA"
+	(shape bidirectional)
+	(at 30 80 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "68ea67a1-07d6-45e4-8385-7cb279667a26")
+)
+(hierarchical_label "I2C_SCL"
+	(shape input)
+	(at 30 85 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "45fd744b-0783-4822-a92b-246177f9926a")
+)
+(hierarchical_label "TOUCH_INT"
+	(shape output)
+	(at 30 90 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5c6f59eb-c0c0-4ce3-947a-320498e26751")
+)
+(hierarchical_label "TOUCH_RST"
+	(shape input)
+	(at 30 95 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "e533212b-5708-4fb5-980b-92b779dcb3b3")
+)
+(text "DISPLAY MODULE\n==============\nILI9488 480x320 IPS 3.5\" SPI LCD, FFC 40-pin (or pre-built breakout via FFC).\nDrive in 16-bit color via SPI 4-wire (RGB565), max 40 MHz SCK.\nBacklight: 4x white LEDs in series, 80mA total. AOT403 N-MOSFET driven by SPI_LCD_BL (LEDC PWM, 5 kHz).\nSeries resistor: V5P0_LCD - 12 ohm - 4xLED string - drain of FET - GND.\nTOUCH\n-----\nFT6336U on same FFC (most 3.5\" panels integrate it). I2C @ 400 kHz, addr 0x38.\nTOUCH_INT: open-drain, 10k pullup to V3P3.\nTOUCH_RST: 10k pullup to V3P3, ESP32 drives low to reset.\nDECOUPLING\n----------\nV3P3 near LCD VCI: 10uF + 100nF.\nV5P0_LCD near backlight: 22uF + 100nF."
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "84d18754-e948-4775-9464-e508981f86c9")
+)
+	(embedded_fonts no)
+)

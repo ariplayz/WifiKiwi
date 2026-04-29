@@ -1,0 +1,123 @@
+(kicad_sch
+	(version 20260306)
+	(generator "wifikiwi-gen")
+	(generator_version "10.0")
+	(uuid "d8999a76-32d8-40aa-beba-8f24fff0d6a4")
+	(paper "A3")
+	(title_block
+		(title "User I/O - buttons, RGB LED, RF-active LED, MicroSD")
+		(rev "0.1.0-dev")
+		(company "WifiKiwi contributors")
+		(comment 1 "Hierarchical sub-sheet -- see WifiKiwi.kicad_sch root")
+		(comment 2 "Licensed under CERN-OHL-S v2")
+	)
+	(lib_symbols)
+(hierarchical_label "V3P3"
+	(shape input)
+	(at 30 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "0dfa7e9c-acb9-462f-bc5d-e946db56dcb0")
+)
+(hierarchical_label "GND"
+	(shape input)
+	(at 30 35 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "cd3da244-0b40-436c-afda-7307725cbcd9")
+)
+(hierarchical_label "BTN_OK"
+	(shape output)
+	(at 30 40 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "25f8e5e3-3bc8-4ba9-8d67-71f94977c1a5")
+)
+(hierarchical_label "BTN_BACK"
+	(shape output)
+	(at 30 45 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "d0a916ce-5a65-4e43-9020-db0081f5decf")
+)
+(hierarchical_label "BTN_UP"
+	(shape output)
+	(at 30 50 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "8524a09a-9c7b-4b31-a686-ea628f26b6d6")
+)
+(hierarchical_label "BTN_DOWN"
+	(shape output)
+	(at 30 55 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "5d9c26d7-b87f-40d2-b8dd-3c8e3697f4d0")
+)
+(hierarchical_label "RF_ACTIVE"
+	(shape input)
+	(at 30 60 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "a8f0a917-ab50-4e04-bd2d-6559aab2cf9f")
+)
+(hierarchical_label "SD_CS"
+	(shape input)
+	(at 30 65 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "f51c068d-c64c-43b3-9f05-48444428c9cb")
+)
+(hierarchical_label "SPI_RF_SCK"
+	(shape input)
+	(at 30 70 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "9ec3cbd6-b9ce-489d-8642-77266961d940")
+)
+(hierarchical_label "SPI_RF_MOSI"
+	(shape input)
+	(at 30 75 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "26416777-a6a1-407f-8dc8-09b7935565fa")
+)
+(hierarchical_label "SPI_RF_MISO"
+	(shape output)
+	(at 30 80 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left)
+	)
+	(uuid "952161e2-5ef3-4626-85b5-ae19e19ac2bf")
+)
+(text "BUTTONS (4): SMD tactile, RC debounce 100nF + 10k pullup to V3P3, ESD TVS to GND.\nRF-ACTIVE LED: red 0603, 1k series, driven HIGH = ON. This LED is wired in HARDWARE\n  in series with the rf_safety arbiter logic so it cannot lie about TX state.\nSTATUS LED: WS2812B-2020 RGB on the front panel, V3P3 + 100nF, data from a free GPIO.\nMICROSD: standard push-push card cage, shares SPI_RF bus, dedicated SD_CS. Card detect\n  pin to a free GPIO with 10k pullup. Series 33 ohm on SCK/MOSI/MISO for SI."
+	(at 100 30 0)
+	(effects
+		(font (size 1.27 1.27))
+		(justify left top)
+	)
+	(uuid "47e9c8dd-c9b6-4ffb-9ca3-f9833ec291f6")
+)
+	(embedded_fonts no)
+)
