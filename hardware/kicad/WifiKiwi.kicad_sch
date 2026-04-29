@@ -1,0 +1,17 @@
+(kicad_sch (version 20231120) (generator "wifikiwi-scaffold")
+  (uuid "00000000-0000-0000-0000-000000000001")
+  (paper "A3")
+  (title_block
+    (title "WifiKiwi - Top Sheet")
+    (date "")
+    (rev "0.1.0-dev")
+    (company "WifiKiwi contributors")
+    (comment 1 "Schematic capture pending - see docs/plan.md")
+    (comment 2 "Licensed under CERN-OHL-S v2")
+  )
+  (lib_symbols)
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+  (symbol_instances)
+)
